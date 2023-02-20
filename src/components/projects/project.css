@@ -1,0 +1,46 @@
+.pro-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px;
+  gap: 40px;
+}
+.pro-cont {
+  display: flex;
+  gap: 50px;
+}
+.pro-self {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #dddddd;
+  gap: 10px;
+}
+
+.pro-icon {
+  font-size: 4rem;
+  color: #d53f34;
+}
+
+/* For the tablet view */
+@media screen and (max-width: 992px) {
+  .pro-cont {
+    gap: 40px;
+  }
+  .pro-self {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .pro-cont {
+    flex-direction: column;
+  }
+}

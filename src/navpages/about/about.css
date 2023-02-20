@@ -1,0 +1,119 @@
+.ab-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 2px #ededed;
+  height: 100px;
+  color: #0000ff;
+}
+.ab-sub > h2 {
+  font-size: 2rem;
+}
+
+.logif-body {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  height: 100vh;
+  gap: 40px;
+}
+.logif-img {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.logif-img > img {
+  width: 500px;
+}
+
+/* for the text */
+.logif-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logif-text > h2 {
+  font-size: 1.8rem;
+  color: #333333;
+  padding-bottom: 20px;
+  box-shadow: 0px 2px #ededed;
+}
+
+.logif-text > h3 {
+  font-size: 1.8rem;
+  color: #333333;
+}
+.logif-text ul > li {
+  list-style-type: disc;
+  color: #716f6b;
+}
+.about-socio {
+  display: flex;
+  gap: 10px;
+}
+.socio-fb {
+  background-color: #3b5998;
+}
+.socio-tw {
+  background-color: #00aced;
+}
+.socio-in {
+  background-color: #d2001a;
+}
+.socio-tik {
+  background-color: #000;
+  color: #fff;
+}
+
+.socio-fb,
+.socio-tw,
+.socio-in,
+.socio-tik {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 7px 7px;
+  color: #fff;
+}
+/* for the social icons */
+.icons {
+  margin-left: 30px;
+}
+
+/* For the tablet view */
+@media screen and (max-width: 992px) {
+  .logif-body {
+    padding: 100px 20px 0px 20px;
+  }
+  .logif-img > img {
+    width: 370px;
+  }
+  .logif-text > h2,
+  .logif-text > h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .logif-body {
+    flex-direction: column-reverse;
+    padding: 100px 20px;
+  }
+  .logif-img {
+    gap: 40px;
+  }
+  .logif-img > img {
+    width: 300px;
+  }
+  .logif-text {
+    padding: 0 20px;
+  }
+  .logif-text > h2,
+  .logif-text > h3 {
+    font-size: 1.5rem;
+  }
+}

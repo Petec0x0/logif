@@ -1,0 +1,155 @@
+.l-left {
+  padding: 20px 30px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: #eaeaea;
+  color: #726a67;
+  width: 450px;
+  height: 690px;
+}
+.bank {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.l-left > h2,
+.l-right h2 {
+  font-size: 1.6rem;
+  color: #333333;
+  padding-bottom: 10px;
+  box-shadow: 0px 4px #fff;
+  margin-bottom: 10px;
+}
+
+.l-left p {
+  font-size: 0.9rem;
+}
+
+.l-left span {
+  font-weight: 700;
+}
+.l-left > ul > li {
+  list-style-type: disc;
+  margin-left: 15px;
+}
+
+.note {
+  font-style: italic;
+  font-weight: 700;
+  color: #fe0d26;
+}
+
+.local-btn {
+  text-align: center;
+  background-color: #00aced;
+  font-size: 1rem;
+  color: #fff;
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* l-right */
+.l-right {
+  padding: 20px 30px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: #eaeaea;
+  color: #726a67;
+  width: 450px;
+  height: auto;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cont > input {
+  height: 30px;
+}
+
+.l-icon {
+  padding: 20px 0px 0px 290px;
+  height: 140px;
+}
+/* paystack */
+
+.paystack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.paystack button {
+  align-self: center;
+  cursor: pointer;
+  text-align: center;
+  background-color: #00aced;
+  font-size: 1rem;
+  color: #fff;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.pay-input {
+  padding: 10px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pay-input input {
+  width: 100%;
+  height: 30px;
+  border: none;
+}
+.pay-sub {
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #00aced;
+  font-size: 1rem;
+  color: #fff;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* For the tablet view */
+@media screen and (max-width: 992px) {
+  .local-body {
+    gap: 30px;
+    padding: 450px 50px;
+    height: 800px;
+  }
+
+  .l-icon {
+    padding: 20px 0px 0px 60px;
+  }
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .local-body {
+    padding: 820px 0px;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .l-left {
+    width: 350px;
+    height: inherit;
+  }
+  .l-right {
+    padding-bottom: 15px;
+    margin-top: 0;
+    width: 350px;
+    height: auto;
+  }
+  .l-icon {
+    padding: 20px 0px 0px 20px;
+  }
+}

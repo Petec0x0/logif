@@ -1,0 +1,123 @@
+.inter-body {
+  display: flex;
+  background-image: url('../../img/thanks.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* For the button */
+.inter-btn {
+  display: flex;
+  gap: 2px;
+}
+.bank-btn {
+  background-color: #00aced;
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+  width: 170px;
+  padding: 10px;
+  border-radius: 5px 5px 0px 0px;
+  cursor: pointer;
+}
+
+.bank-btn-active {
+  background: #fff;
+  color: #726a67;
+}
+
+.inter-left {
+  padding: 20px 30px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  color: #726a67;
+  width: auto;
+  font-size: 0.9rem;
+  height: inherit;
+}
+.inter-left > ul > li {
+  list-style-type: disc;
+  margin-left: 15px;
+}
+.inter-left > ul {
+  margin-bottom: 15px;
+}
+
+.inter-left span {
+  font-weight: 700;
+}
+
+.inter-bank {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.uba-bank,
+.uk-bank {
+  display: flex;
+  gap: 80px;
+  line-height: 20px;
+}
+
+.uk {
+  margin-left: 55px;
+  line-height: 20px;
+}
+/*  */
+.inter-right {
+  padding: 20px 30px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  color: #726a67;
+  width: auto;
+  font-size: 0.9rem;
+  height: inherit;
+}
+/* for paystack */
+.paystack-right {
+  padding: 20px 30px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #726a67;
+  color: #fff;
+  width: auto;
+  font-size: 0.9rem;
+  height: inherit;
+}
+
+.l-icon {
+  padding: 20px 0px 0px 290px;
+  height: 140px;
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .uba-bank,
+  .uk-bank {
+    gap: 50px;
+  }
+  .uk {
+    margin-left: 30px;
+  }
+  .inter-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inter-body {
+    padding: 540px 100px;
+  }
+  .inter-left,
+  .inter-right,
+  .paystack-right {
+    width: 350px;
+  }
+}

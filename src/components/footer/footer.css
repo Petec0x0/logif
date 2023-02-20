@@ -1,0 +1,50 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #252525;
+  height: 60px;
+}
+.footer > p {
+  color: #a1a09f;
+}
+
+.fo-socio {
+  display: flex;
+  gap: 20px;
+}
+.socio {
+  background-color: #666;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 6px 6px;
+  color: #fff;
+}
+
+/* For the tablet view */
+@media screen and (max-width: 992px) {
+  .footer > p {
+    font-size: 0.9rem;
+  }
+  .footer {
+    gap: 150px;
+  }
+  .socio {
+    width: 26px;
+    height: 26px;
+    padding: 4px 4px;
+  }
+}
+
+/* For the mobile View */
+@media screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 25px 0px;
+    height: 100px;
+  }
+}
