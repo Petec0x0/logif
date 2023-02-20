@@ -14,7 +14,7 @@ import logo from '../../img/logif-min.png';
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleclick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  //const closeMobileMenu = () => setClick(false);
   return (
     <nav>
       <Link to="/">
