@@ -27,7 +27,7 @@ const Give = () => {
       counter += 1;
     }
     return result;
-}
+  }
 
   // const paystack = (e) => {
   //   e.preventDefault();
