@@ -1,72 +1,51 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  FaBars,
-  FaFacebook,
-  FaInstagram,
-  FaTimes,
-  FaTwitter,
-} from 'react-icons/fa';
-import './nav.css';
-import { NavMenuList } from './NavData';
+
+//import './nav.css';
 import logo from '../../img/logif-min.png';
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const handleclick = () => setClick(!click);
-  //const closeMobileMenu = () => setClick(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  // const handleclick = () => setClick(!click);
+  const toggleMobileMenu = () => setMobileNavOpen(!mobileNavOpen);
   return (
-    <nav>
-      <Link to="/">
-        <img className="logo" src={logo} alt="Logo" />
-      </Link>
-      {/* For the mobile icons */}
-      <div className="ham-menu" onClick={handleclick}>
-        {click ? <FaTimes /> : <FaBars />}
+    <>
+      <div className="container max-w-screen-xl mx-auto px-4">
+        <nav className="flex-wrap lg:flex items-center">
+          <div className="flex items-center justify-between mb-3 mt-1">
+            <img className="w-44 h-20" src={logo} alt="Logo" />
+
+            <button onClick={toggleMobileMenu} className="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-primary text-primary rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <ul className={`lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
+            <li className="font-extrabold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-extrabold" to="/">Home</Link>
+            </li>
+            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-extrabold" to="/donate">Donate</Link>
+            </li>
+            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-extrabold" to="/">Membership</Link>
+            </li>
+            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-extrabold" to="/about">About us</Link>
+            </li>
+          </ul>
+
+          <div className={`lg:flex mb-2 flex-col md:flex-row md:items-center text-center md:space-x-6 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
+            {/* <a href="/#" className="px-6 py-4 bg-primary text-white font-semibold text-lg rounded-xl hover:bg-primary transition ease-in-out durateal-bg-primary mb-5 md:mb-0">Join</a> */}
+            <a href="/#" className="px-6 py-4 border-2 border-primary text-primary font-semibold text-lg rounded-xl hover:bg-primary hover:text-white transition ease-linear durateal-bg-primary">Become a member</a>
+          </div>
+        </nav >
       </div>
-      {/* For the nav menu */}
-      <div>
-        <ul className={click ? 'menu-list active' : 'menu-list'}>
-          {NavMenuList.map((menu, key) => {
-            return (
-              <li key={key} className="menu-items">
-                <Link
-                  className="menu-link"
-                  //   onClick={closeMobileMenu}
-                  to={menu.link}
-                >
-                  {menu.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      {/* for the social icons */}
-      <div className="nav-soc">
-        <a
-          href="https://twitter.com/cojimofficiel"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaTwitter />
-        </a>
-        <a
-          href="https://web.facebook.com/ChristopherOrjiMinistriesCOJIM?_rdc=1&_rdr"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaFacebook />
-        </a>
-        <a
-          href="https://www.instagram.com/cojimofficiel/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaInstagram />
-        </a>
-      </div>
-    </nav>
+    </>
   );
 };
 

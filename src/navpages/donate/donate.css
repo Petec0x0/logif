@@ -1,11 +1,9 @@
 .don-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
   background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
-    url('../../img//thanks2.jpg');
+    url('../../img/donate-bg.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,11 +15,6 @@
   font-size: 4rem;
 }
 
-.don-body > p {
-  font-size: 2rem;
-  width: 1000px;
-  text-align: center;
-}
 
 .don-btn {
   width: 160px;
@@ -34,7 +27,7 @@
 }
 
 /* For the tablet view */
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .don-body > h2 {
     font-size: 3rem;
   }
@@ -43,10 +36,10 @@
     width: 700px;
     text-align: center;
   }
-}
+} */
 
 /* For the mobile View */
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 576px) {
   .don-body > h2 {
     font-size: 2.5rem;
   }
@@ -55,4 +48,4 @@
     width: 360px;
     text-align: center;
   }
-}
+} */
