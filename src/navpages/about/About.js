@@ -44,13 +44,6 @@ const About = () => {
                 empowerment, we can help individuals and communities thrive.
               </p>
               <p className="mt-6 text-gray-600">
-                Our objectives are to improve the welfare of our members, empower the less
-                privileged in the society, and provide social amenities to the community.
-                We are committed to making a positive impact in the lives of those we serve.
-                We believe that by providing opportunities for education, health, and economic
-                empowerment, we can help individuals and communities thrive.
-              </p>
-              <p className="mt-6 text-gray-600">
                 Thank you for visiting our website. We invite you to join us in our mission to
                 spread the love of God and make a positive impact in the world.
               </p>
