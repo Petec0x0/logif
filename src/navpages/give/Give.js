@@ -135,7 +135,7 @@ const Give = () => {
                 <section className="bg-[#F3F4F6] pt-4 pb-10 px-4">
                   <div className="container mx-auto">
                     <div className="-mx-4 flex flex-wrap">
-                      <div className="w-full px-4 md:w-1/2 xl:w-1/3">
+                      <div className="w-full px-4 md:w-1/2 xl:w-1/4">
                         <div className="mb-10 overflow-hidden rounded-lg bg-white">
                           <img
                             src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ecobank_Logo_EN.png"
@@ -166,7 +166,7 @@ const Give = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full px-4 md:w-1/2 xl:w-1/3">
+                      <div className="w-full px-4 md:w-1/2 xl:w-1/4">
                         <div className="mb-10 overflow-hidden rounded-lg bg-white">
                           <img
                             src="https://businessday.ng/wp-content/uploads/2022/02/UBA-8-1.png"
@@ -197,7 +197,7 @@ const Give = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full px-4 md:w-1/2 xl:w-1/3">
+                      <div className="w-full px-4 md:w-1/2 xl:w-1/4">
                         <div className="mb-10 overflow-hidden rounded-lg bg-white">
                           <img
                             src="https://i2.wp.com/kleenriteltd.com/wp-content/uploads/2014/11/zenith-bank.jpg?fit=750%2C350&ssl=1"
@@ -228,7 +228,7 @@ const Give = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full px-4 md:w-1/2 xl:w-1/3">
+                      <div className="w-full px-4 md:w-1/2 xl:w-1/4">
                         <div className="mb-10 overflow-hidden rounded-lg bg-white">
                           <img
                             src="https://cdn.punchng.com/wp-content/uploads/2022/06/09021310/First-Bank.png"
@@ -374,7 +374,7 @@ const Give = () => {
                       </label>
                       <div className="font-semibold">Full Name</div>
                       <div className="mb-2">
-                        <input name="names" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g John Doe" />
+                        <input name="names" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g Christopher Orji" />
                       </div>
 
                       <div className="font-semibold">How much would you like to donate?</div>
@@ -384,12 +384,12 @@ const Give = () => {
 
                       <div className="font-semibold">Enter your email address</div>
                       <div className="mb-2">
-                        <input name="email_address" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g john@gmail.com" />
+                        <input name="email_address" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g cojimmedia@gmail.com" />
                       </div>
 
                       <div className="font-semibold">Enter your phone number</div>
                       <div className="mb-2">
-                        <input name="phone_number" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g +2349087655445" />
+                        <input name="phone_number" className="mt-1 w-full rounded-[4px] border border-[#A0ABBB] p-2" type="text" placeholder="e.g +2347043315405" />
                       </div>
 
                       <div className="relative inline-flex self-center">
