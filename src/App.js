@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './navpages/about/About';
 import Donate from './navpages/donate/Donate';
 import Give from './navpages/give/Give';
+import Membership from 'navpages/membership/Membership';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" exact element={<About />} />
         <Route path="/donate" exact element={<Donate />} />
         <Route path="/give" exact element={<Give />} />
+        <Route path="/membership" exact element={<Membership />} />
       </Routes>
     </Router>
   );

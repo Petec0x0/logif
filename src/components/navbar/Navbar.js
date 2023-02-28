@@ -32,7 +32,7 @@ const Navbar = () => {
               <Link className="font-extrabold" to="/donate">Donate</Link>
             </li>
             <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
-              <Link className="font-extrabold" to="/">Membership</Link>
+              <Link className="font-extrabold" to="/membership">Membership</Link>
             </li>
             <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
               <Link className="font-extrabold" to="/about">About us</Link>
