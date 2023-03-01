@@ -40,8 +40,8 @@ const Navbar = () => {
           </ul>
 
           <div className={`lg:flex mb-2 flex-col md:flex-row md:items-center text-center md:space-x-6 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
-            {/* <a href="/#" className="px-6 py-4 bg-primary text-white font-semibold text-lg rounded-xl hover:bg-primary transition ease-in-out durablue-bg-primary mb-5 md:mb-0">Join</a> */}
             <a href="/membership" className="px-6 py-4 border-2 border-primary text-primary font-semibold text-lg rounded-xl hover:bg-primary hover:text-white transition ease-linear durablue-bg-primary">Become a member</a>
+            <a href="/member/login" className="px-6 py-4 bg-primary text-white font-semibold text-lg rounded-xl hover:bg-primary transition ease-in-out durablue-bg-primary mb-5 md:mb-0">Login</a>
           </div>
         </nav >
       </div>

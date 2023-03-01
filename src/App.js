@@ -10,6 +10,10 @@ import DashboardLayout from 'navpages/DashboardLayout';
 import Overview from 'navpages/Overview';
 import NotFound from 'navpages/NotFound';
 import MembersList from 'navpages/MembersList';
+import AdminLogin from 'navpages/AdminLogin';
+import MemberLogin from 'navpages/MemberLogin';
+import Profile from 'navpages/Profile';
+import MemberPaymentList from 'navpages/MemberPaymentList';
 
 function App() {
   return (
@@ -20,10 +24,14 @@ function App() {
         <Route path="/donate" exact element={<Donate />} />
         <Route path="/give" exact element={<Give />} />
         <Route path="/membership" exact element={<Membership />} />
+        <Route path="/member/login" exact element={<MemberLogin />} />
+        <Route path="/admin/login" exact element={<AdminLogin />} />
         <Route path="dashboard/" element={<DashboardLayout />}>
           <Route index element={<Overview />} />
           <Route path="overview" element={<Overview />} />
           <Route path="members-list" element={<MembersList />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="payment-list/:memberId" element={<MemberPaymentList />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
