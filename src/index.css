@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* Progress bar*/
+.fluentProgressBar-normal {
+    background-color: #e6ecf0;
+    height: 4px;
+}
+
+.fluentProgressBar-waiting {
+    background: rgba(0, 120, 212, 0);
+    background: -moz-linear-gradient(left, rgba(0, 120, 212, 0) 0%, rgb(254, 255, 255) 51%, rgba(0, 120, 212, 0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 120, 212, 0)), color-stop(51%, rgb(242, 245, 242)), color-stop(100%, rgba(0, 120, 212, 0)));
+    background: -webkit-linear-gradient(left, rgba(0, 120, 212, 0) 0%, rgb(250, 252, 250) 51%, rgba(0, 120, 212, 0) 100%);
+    background: -o-linear-gradient(left, rgba(0, 120, 212, 0) 0%, rgb(248, 250, 248) 51%, rgba(0, 120, 212, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 120, 212, 0) 0%, rgb(245, 247, 245) 51%, rgba(0, 120, 212, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 120, 212, 0) 0%, rgb(255, 255, 255) 51%, rgba(0, 120, 212, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078d4', endColorstr='#0078d4', GradientType=1);
+
+    height: 4px;
+
+    -webkit-animation: progressBarAnimation 2s linear infinite;
+    animation: progressBarAnimation 2s linear infinite;
+}
+
+@keyframes progressBarAnimation {
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}

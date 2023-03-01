@@ -41,7 +41,7 @@ const Navbar = () => {
 
           <div className={`lg:flex mb-2 flex-col md:flex-row md:items-center text-center md:space-x-6 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
             {/* <a href="/#" className="px-6 py-4 bg-primary text-white font-semibold text-lg rounded-xl hover:bg-primary transition ease-in-out durateal-bg-primary mb-5 md:mb-0">Join</a> */}
-            <a href="/#" className="px-6 py-4 border-2 border-primary text-primary font-semibold text-lg rounded-xl hover:bg-primary hover:text-white transition ease-linear durateal-bg-primary">Become a member</a>
+            <a href="/membership" className="px-6 py-4 border-2 border-primary text-primary font-semibold text-lg rounded-xl hover:bg-primary hover:text-white transition ease-linear durateal-bg-primary">Become a member</a>
           </div>
         </nav >
       </div>
