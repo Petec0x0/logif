@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import ReactDOM from 'react-dom';
 import Swal from 'sweetalert2'
 import Footer from 'components/footer/Footer'
@@ -22,6 +22,8 @@ const Membership = () => {
 
     const [uploadedReceiptImg, setUploadedReceiptImg] = useState();
     const [uploadedPassportImg, setUploadedPassportImg] = useState();
+    const [passportPhotoReaderResult, setPassportPhotoReaderResult] = useState();
+    const [receiptReaderResult, setReceiptReaderResult] = useState();
     const [isMakingPayment, setIsMakingPayment] = useState(false);
 
     const handleReceiptUpload = (e) => {
@@ -97,6 +99,7 @@ const Membership = () => {
         }
 
         if (!uploadedReceiptImg) {
+            setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
                 text: 'Please upload payment receipt to continue',
@@ -107,6 +110,7 @@ const Membership = () => {
         }
 
         if (!uploadedPassportImg) {
+            setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
                 text: 'Please upload payment receipt to continue',
@@ -115,6 +119,49 @@ const Membership = () => {
             });
             return false;
         }
+
+        console.log(passportPhotoReaderResult, receiptReaderResult);
+        // send form data as post request to the server
+        (async () => {
+            const rawResponse = await fetch('/api/auth/membership/register', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...formInputData,
+                    passportPhoto: passportPhotoReaderResult,
+                    receipt: receiptReaderResult
+                })
+            });
+            const content = await rawResponse.json();
+            // stop the progress bar
+            setSubmitted(false);
+            // check if there is an error in the response
+            if (content.error) {
+                Swal.fire({
+                    title: 'Error!',
+                    text: content.message,
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                })
+            } else {
+                setFormInputData({
+                    ...formInputData,
+                    firstname: '', lastname: '', phone: '', email: '',
+                    occupation: '', nationality: '', country: '', stateOrRegion: '',
+                    password: '', passwordConfirm: ''
+                });
+
+                Swal.fire({
+                    title: 'Success!',
+                    text: content.message,
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                });
+            }
+        })();
     }
 
     const validateEmail = (email) => {
@@ -155,6 +202,48 @@ const Membership = () => {
 
         })();
     }
+
+    useEffect(() => {
+        if(!uploadedReceiptImg){
+            return;
+        }
+
+        const receiptReader = new FileReader();
+        receiptReader.readAsDataURL(uploadedReceiptImg);
+        receiptReader.onloadend = () => {
+            setReceiptReaderResult(receiptReader.result);
+        };
+        receiptReader.onerror = () => {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Something went wrong with the uploaded receipt',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [uploadedReceiptImg]);
+
+    useEffect(() => {
+        if(!uploadedPassportImg){
+            return;
+        }
+
+        const passportPhotoReader = new FileReader();
+        passportPhotoReader.readAsDataURL(uploadedPassportImg);
+        passportPhotoReader.onloadend = () => {
+            setPassportPhotoReaderResult(passportPhotoReader.result);
+        };
+        passportPhotoReader.onerror = () => {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Something went wrong with the uploaded passport photo',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [uploadedPassportImg]);
 
 
     return (
@@ -313,8 +402,8 @@ const Membership = () => {
                                     <div
                                         className="relative order-first md:order-last h-28 md:h-auto flex justify-center items-center border border-dashed border-gray-400 col-span-2 m-2 rounded-lg bg-no-repeat bg-center bg-origin-padding bg-cover">
                                         {
-                                            uploadedPassportImg ?
-                                                <img className="w-16 h-24 md:w-32 md:h-40" src={URL.createObjectURL(uploadedReceiptImg)} alt="Uploaded passport" /> :
+                                            uploadedReceiptImg ?
+                                                <img className="w-16 h-24 md:w-32 md:h-40" src={URL.createObjectURL(uploadedReceiptImg)} alt="Uploaded receipt" /> :
                                                 <span className="text-gray-400 opacity-75">
                                                     <svg className="w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.7" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round"
