@@ -90,7 +90,7 @@ const MemberLogin = () => {
                             <div className="text-center">
                                 <h2 className="text-4xl font-bold text-center text-gray-700 dark:text-white">Welcome Back</h2>
 
-                                <p className="mt-3 text-gray-500 dark:text-gray-300">Sign in to access your membership account</p>
+                                <p className="mt-3 text-gray-500 dark:text-gray-300">Sign in to access your partnership account</p>
                             </div>
 
 
@@ -136,7 +136,7 @@ const MemberLogin = () => {
 
                                 </form>
 
-                                <p className="mt-6 text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a href="/membership" className="text-blue-500 focus:outline-none focus:underline hover:underline">Become a member</a>.</p>
+                                <p className="mt-6 text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a href="/membership" className="text-blue-500 focus:outline-none focus:underline hover:underline">Become a partner</a>.</p>
                             </div>
                         </div>
                     </div>

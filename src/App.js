@@ -14,6 +14,8 @@ import AdminLogin from 'navpages/AdminLogin';
 import MemberLogin from 'navpages/MemberLogin';
 import Profile from 'navpages/Profile';
 import MemberPaymentList from 'navpages/MemberPaymentList';
+import MakePayment from 'navpages/MakePayment';
+import UnconfirmedPayments from 'navpages/UnconfirmedPayments';
 
 function App() {
   return (
@@ -30,8 +32,10 @@ function App() {
           <Route index element={<Overview />} />
           <Route path="overview" element={<Overview />} />
           <Route path="members-list" element={<MembersList />} />
+          <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
           <Route path="profile" element={<Profile />} />
           <Route path="payment-list/:memberId" element={<MemberPaymentList />} />
+          <Route path="make-payment" element={<MakePayment />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

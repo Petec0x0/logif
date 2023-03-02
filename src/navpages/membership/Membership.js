@@ -120,7 +120,6 @@ const Membership = () => {
             return false;
         }
 
-        console.log(passportPhotoReaderResult, receiptReaderResult);
         // send form data as post request to the server
         (async () => {
             const rawResponse = await fetch('/api/auth/membership/register', {
