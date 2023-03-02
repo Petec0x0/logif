@@ -16,6 +16,7 @@ import Profile from 'navpages/Profile';
 import MemberPaymentList from 'navpages/MemberPaymentList';
 import MakePayment from 'navpages/MakePayment';
 import UnconfirmedPayments from 'navpages/UnconfirmedPayments';
+import GlobalPayReceipt from 'navpages/GlobalPayReceipt';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="payment-list/:memberId" element={<MemberPaymentList />} />
           <Route path="make-payment" element={<MakePayment />} />
         </Route>
+        <Route path="/verify-globalpay" exact element={<GlobalPayReceipt />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
