@@ -203,7 +203,7 @@ const Membership = () => {
     }
 
     useEffect(() => {
-        if(!uploadedReceiptImg){
+        if (!uploadedReceiptImg) {
             return;
         }
 
@@ -224,7 +224,7 @@ const Membership = () => {
     }, [uploadedReceiptImg]);
 
     useEffect(() => {
-        if(!uploadedPassportImg){
+        if (!uploadedPassportImg) {
             return;
         }
 
@@ -423,6 +423,9 @@ const Membership = () => {
                                 <button onClick={handleSubmit} className="p-3 my-8 text-lg bg-gradient-to-r from-blue-500 to-primary rounded-xl text-white">Submit Now</button>
                             </div>
 
+                            <p className="mt-4 text-gray-400">
+                                Please send a screenshot of your registration form to our WhatsApp number at <a className="text-primary" target="_blank" href="https://wa.me/2347043315405?text=">+2347043315405</a>.
+                            </p>
                         </div>
                     </div>
                 </div>
