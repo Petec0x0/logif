@@ -424,7 +424,7 @@ const Membership = () => {
                             </div>
 
                             <p className="mt-4 text-gray-400">
-                                Please send a screenshot of your registration form to our WhatsApp number at <a className="text-primary" target="_blank" href="https://wa.me/2347043315405?text=">+2347043315405</a>.
+                                Please send a screenshot of your registration form to our WhatsApp number at <a className="text-primary" target="_blank" rel="noreferrer" href="https://wa.me/2347043315405?text=">+2347043315405</a>.
                             </p>
                         </div>
                     </div>
