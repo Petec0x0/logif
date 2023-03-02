@@ -17,6 +17,7 @@ import MemberPaymentList from 'navpages/MemberPaymentList';
 import MakePayment from 'navpages/MakePayment';
 import UnconfirmedPayments from 'navpages/UnconfirmedPayments';
 import GlobalPayReceipt from 'navpages/GlobalPayReceipt';
+import AdminSettings from 'navpages/AdminSettings';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="dashboard/" element={<DashboardLayout />}>
           <Route index element={<Overview />} />
           <Route path="overview" element={<Overview />} />
+          <Route path="settings" exact element={<AdminSettings />} />
           <Route path="members-list" element={<MembersList />} />
           <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
           <Route path="profile" element={<Profile />} />
