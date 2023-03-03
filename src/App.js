@@ -18,6 +18,7 @@ import MakePayment from 'navpages/MakePayment';
 import UnconfirmedPayments from 'navpages/UnconfirmedPayments';
 import GlobalPayReceipt from 'navpages/GlobalPayReceipt';
 import AdminSettings from 'navpages/AdminSettings';
+import ContactUs from 'navpages/ContactUs';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about" exact element={<About />} />
         <Route path="/donate" exact element={<Donate />} />
         <Route path="/give" exact element={<Give />} />
+        <Route path="/contact" exact element={<ContactUs />} />
         <Route path="/membership" exact element={<Membership />} />
         <Route path="/member/login" exact element={<MemberLogin />} />
         <Route path="/admin/login" exact element={<AdminLogin />} />

@@ -37,6 +37,9 @@ const Navbar = () => {
             <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
               <Link className="font-extrabold" to="/about">About us</Link>
             </li>
+            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-extrabold" to="/contact">Contact us</Link>
+            </li>
           </ul>
 
           <div className={`lg:flex mb-2 flex-col md:flex-row md:items-center text-center md:space-x-6 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
