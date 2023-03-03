@@ -69,7 +69,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ memeberId: _id })
+                body: JSON.stringify({ memeberId: itemDetails._id })
             });
             const content = await rawResponse.json();
             const status = rawResponse.status;
