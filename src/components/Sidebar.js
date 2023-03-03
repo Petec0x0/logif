@@ -29,7 +29,8 @@ const Sidebar = ({ isSidebarOpen }) => {
             if (content.error) {
                 alert(content.message);
             } else {
-                setIsAdmin(content.data.isAdmin);
+                setIsAdmin(content.isAdmin);
+                console.log(content.isAdmin);
                 setUserData({
                     ...userData,
                     ...content.data
