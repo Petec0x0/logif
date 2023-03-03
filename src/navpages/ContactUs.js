@@ -31,7 +31,7 @@ const ContactUs = () => {
                                         Enugu East Local Government Area, Enugu State, Nigeria, West Africa
                                     </p>
                                     <p class="text-gray-500 mb-2">+ 234 704 331 5405</p>
-                                    <p class="text-gray-500 mb-2">info@cojim.org</p>
+                                    <p class="text-gray-500 mb-2">info@logif.org</p>
                                 </div>
                             </div>
                         </div>
