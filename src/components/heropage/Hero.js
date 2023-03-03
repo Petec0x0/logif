@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './hero.css';
-import bg_img_1 from 'img/orphan.jpg';
-import bg_img_2 from 'img/help.jpg';
-import bg_img_3 from 'img/hero-2.jpg';
-import bg_img_4 from 'img/lovers.jpg';
-import bg_img_5 from 'img/hero.jpg';
+import bg_img_1 from 'img/donate-bg.jpg';
+import bg_img_2 from 'img/hero-2.jpg';
+import bg_img_3 from 'img/hero-3.jpg';
+import bg_img_4 from 'img/hero-4.jpg';
+import bg_img_5 from 'img/hero-5.jpg';
 
 const bg_images = [bg_img_1, bg_img_2, bg_img_3, bg_img_4, bg_img_5];
 
@@ -16,7 +16,7 @@ const Hero = () => {
     const intervalId = setInterval(() => {
       const index = Math.floor(Math.random() * bg_images.length);
       setBackgroundImage(bg_images[index]);
-    }, 1000);
+    }, 4000);
     return () => clearInterval(intervalId);
   }, []);
   
