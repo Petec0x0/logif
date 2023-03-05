@@ -404,8 +404,8 @@ const Give = () => {
                           </g>
                         </svg>
                         <select name="currency" className="text-2xl w-64 font-bold rounded border-2 border-pribg-primary text-gray-600 h-14 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
-                          <option>NGN</option>
-                          <option>USD</option>
+                          <option value="USD">USD</option>
+                          <option value="NGN">NGN</option>
                         </select>
                       </div>
 
