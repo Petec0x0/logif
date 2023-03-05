@@ -7,6 +7,7 @@ import bg_img_3 from 'img/hero-3.jpg';
 import bg_img_4 from 'img/hero-4.jpg';
 import bg_img_5 from 'img/hero-5.jpg';
 import charity from 'img/charity.jpg';
+import { Link } from 'react-router-dom';
 
 const bg_images = [bg_img_1, bg_img_2, bg_img_3, bg_img_4, bg_img_5];
 
@@ -58,7 +59,9 @@ const Home = () => {
             to social amenities, resulting in a brighter future for all
           </p>
           <button class="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-center text-sm font-medium capitalize leading-5 text-white hover:bg-blue-500 focus:outline-none lg:mx-0 lg:w-auto">
-            Donate Now
+            <Link to="/donate">
+              Donate Now
+            </Link>
           </button>
         </div>
 
