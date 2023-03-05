@@ -6,6 +6,7 @@ import bg_img_2 from 'img/hero-2.jpg';
 import bg_img_3 from 'img/hero-3.jpg';
 import bg_img_4 from 'img/hero-4.jpg';
 import bg_img_5 from 'img/hero-5.jpg';
+import charity from 'img/charity.jpg';
 
 const bg_images = [bg_img_1, bg_img_2, bg_img_3, bg_img_4, bg_img_5];
 
@@ -62,7 +63,7 @@ const Home = () => {
         </div>
 
         <div class="mt-10 flex justify-center">
-          <img alt="???" class="h-96 w-full rounded-xl object-cover lg:w-4/5" src={bg_img_4} />
+          <img alt="???" class="h-96 w-full rounded-xl object-cover lg:w-4/5" src={charity} />
         </div>
       </div>
 
