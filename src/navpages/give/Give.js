@@ -410,7 +410,7 @@ const Give = () => {
                       </div>
 
                       <input type="hidden" id="merch_txnref" name="merch_txnref" value={makeid(50)}></input>
-                      <input type="hidden" id="merchantid" name="merchantid" value="22979" />
+                      <input type="hidden" id="merchantid" name="merchantid" value="22980" />
                     </div>
 
 
