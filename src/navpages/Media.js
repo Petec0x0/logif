@@ -128,7 +128,7 @@ const Media = () => {
         </p>
 
         <div className="flex items-center justify-center space-x-2 mt-6">
-          <a target="_blank" rel="noopener noreferrer" href="https://web.facebook.com/ChristopherOrjiMinistriesCOJIM?mibextid=ZbWKwL&_rdc=1&_rdr" className="text-neutral-800">
+          <a target="_blank" rel="noopener noreferrer" href="/media" className="text-neutral-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -139,7 +139,7 @@ const Media = () => {
                 d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
             </svg>
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/cojimofficiel?t=gM2yvX_4GzUAgcdXD-rP8g&s=09" className="text-neutral-800">
+          <a target="_blank" rel="noopener noreferrer" href="/media" className="text-neutral-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -151,7 +151,7 @@ const Media = () => {
             </svg>
           </a>
 
-          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cojimofficiel/?igshid=YmMyMTA2M2Y%3D" className="text-neutral-800">
+          <a target="_blank" rel="noopener noreferrer" href="/media" className="text-neutral-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -163,7 +163,7 @@ const Media = () => {
             </svg>
           </a>
 
-          <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@christopherorjiministries6459" className="text-neutral-800">
+          <a target="_blank" rel="noopener noreferrer" href="/media" className="text-neutral-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -175,7 +175,7 @@ const Media = () => {
             </svg>
           </a>
 
-          <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@cojim?_t=8aMdh9hObgs&_r=1" className="text-neutral-800">
+          <a target="_blank" rel="noopener noreferrer" href="/media" className="text-neutral-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
