@@ -45,10 +45,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="container mx-auto px-2 py-10 text-center">
-        <div class="mx-auto max-w-lg">
-          <h1 class="text-3xl font-bold text-gray-800 lg:text-4xl">Your Donation Can Help Empower and Transform Lives</h1>
-          <p class="mt-6 text-gray-500 ">
+      <div className="container mx-auto px-2 py-10 text-center">
+        <div className="mx-auto max-w-lg">
+          <h1 className="text-3xl font-bold text-gray-800 lg:text-4xl">Your Donation Can Help Empower and Transform Lives</h1>
+          <p className="mt-6 text-gray-500 ">
             Our mission at Lovers of God International Foundation (LOGIF) is to empower
             individuals and communities through education, health, and economic programs,
             while fostering a spirit of love, compassion, and unity among our members.
@@ -58,15 +58,15 @@ const Home = () => {
             we can make by providing opportunities for the less privileged to thrive and have access
             to social amenities, resulting in a brighter future for all
           </p>
-          <button class="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-center text-sm font-medium capitalize leading-5 text-white hover:bg-blue-500 focus:outline-none lg:mx-0 lg:w-auto">
+          <button className="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-center text-sm font-medium capitalize leading-5 text-white hover:bg-blue-500 focus:outline-none lg:mx-0 lg:w-auto">
             <Link to="/donate">
               Donate Now
             </Link>
           </button>
         </div>
 
-        <div class="mt-10 flex justify-center">
-          <img alt="???" class="h-96 w-full rounded-xl object-cover lg:w-4/5" src={charity} />
+        <div className="mt-10 flex justify-center">
+          <img alt="???" className="h-96 w-full rounded-xl object-cover lg:w-4/5" src={charity} />
         </div>
       </div>
 

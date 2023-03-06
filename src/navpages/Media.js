@@ -51,7 +51,7 @@ const Media = () => {
       <Navbar />
       <div className="container mx-auto px-6 py-6">
         <h1 className="text-center text-2xl font-semibold capitalize text-gray-800 lg:text-3xl">
-          Experience COJIM like never before with our Media Page
+          Media and Gallery
         </h1>
 
         <div className="mx-auto mt-6 flex justify-center">
@@ -61,10 +61,11 @@ const Media = () => {
         </div>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-gray-500">
-          Welcome to City of Jesus International Ministry's Media Page,
-          where you can experience the power and presence of God from the comfort of your own home.
-          Our page is packed with inspiring pictures, videos, and other
-          multimedia content that will help you connect with God and grow in your faith.
+          Welcome to our media page! Here, you can see the impact that our organization
+          is making in the lives of the people we serve. Through our programs,
+          we're providing hope and support to those who need it most.
+          Take a look at our photos, videos, and testimonials to see the difference
+          we're making in the community. Thank you for your interest in our organization!
         </p>
       </div>
 
@@ -120,11 +121,10 @@ const Media = () => {
         </div>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-gray-500">
-          Stay connected with City of Jesus International Ministry and never miss a
-          moment of our inspiring messages and events. Follow us on our social media pages to access all of
-          our media content, including photos, videos, and more. Don't forget to like, share, and comment on
-          our posts to join in the conversation and help spread the word of God to others. Check us out today and
-          see what God is doing in the lives of our church community!
+          Thank you for taking the time to explore our media/gallery page and learn more about our
+          organization's work. We'd love to stay connected with you and keep you up-to-date on our latest programs,
+          events, and initiatives. Be sure to follow us on Facebook, Twitter, and Instagram for even more photos and
+          videos of our work. You can find the links to our social media pages below. Thank you for your support!
         </p>
 
         <div className="flex items-center justify-center space-x-2 mt-6">
