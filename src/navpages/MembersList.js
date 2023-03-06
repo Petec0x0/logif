@@ -152,6 +152,7 @@ const MembersList = () => {
             <MemberDetail
                 toggleEditModal={toggleEditModal}
                 itemDetails={itemDetails}
+                setItemDetails={setItemDetails}
                 isEditModalOpen={isEditModalOpen} />
             {
                 isEditModalOpen &&

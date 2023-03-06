@@ -4,21 +4,64 @@ import Swal from 'sweetalert2'
 // import Alert from './Alert';
 import ProgressBar from './ProgressBar';
 
-const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
+const MemberDetail = ({ toggleEditModal, itemDetails, setItemDetails, isEditModalOpen }) => {
     const navigate = useNavigate();
     const refreshPage = () => {
         navigate(0);
     }
     // States for checking the errors
     const [submitted, setSubmitted] = useState(false);
-    // const [error, setError] = useState(false);
-    // const [alertMsg, setAlertMsg] = useState({ msg: '', color: '' });
+    
+    const handlePartnershipIdChange = (e) => {
+        setItemDetails({
+            ...itemDetails,
+            partnershipId: e.target.value
+        });
+    }
+
+    const handleUpdateId = (e) => {
+        e.preventDefault();
+        // send a patch request to the server to update member ID
+        (async () => {
+            const rawResponse = await fetch('/api/admin/update-id-partner', {
+                method: 'PATCH',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    partnerId: itemDetails._id,
+                    partnershipId: itemDetails.partnershipId
+                })
+            });
+            const content = await rawResponse.json();
+            const status = rawResponse.status;
+            // Redirect the user to login page if status == 401
+            if (status === 401) {
+                // redirect to login page
+                navigate("/");
+                return false;
+            }
+            // check if there is an error in the response
+            if (content.error) {
+                alert(content.message);
+            } else {
+                Swal.fire({
+                    title: 'Info!',
+                    text: "Updated!",
+                    icon: 'info',
+                    confirmButtonText: 'Ok'
+                });
+                refreshPage();
+            }
+        })();
+    }
 
     // Handling the form submission
     const handleApprove = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        // send a patch request to the server to update memeber
+        // send a patch request to the server to update member
         (async () => {
             const rawResponse = await fetch('/api/admin/approve-member', {
                 method: 'PATCH',
@@ -27,7 +70,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    memeberId: itemDetails._id,
+                    memberId: itemDetails._id,
                 })
             });
             const content = await rawResponse.json();
@@ -35,7 +78,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
             // Redirect the user to login page if status == 401
             if (status === 401) {
                 // redirect to login page
-                navigate("/login");
+                navigate("/");
                 return false;
             }
             // check if there is an error in the response
@@ -60,8 +103,8 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
             return false;
         }
 
-        // delete memeber from server
-        // send a delete request to the server to delete memeber
+        // delete member from server
+        // send a delete request to the server to delete member
         (async () => {
             const rawResponse = await fetch('/api/admin/delete-member', {
                 method: 'DELETE',
@@ -69,14 +112,14 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ memeberId: itemDetails._id })
+                body: JSON.stringify({ memberId: itemDetails._id })
             });
             const content = await rawResponse.json();
             const status = rawResponse.status;
             // Redirect the user to login page if status == 401
             if (status === 401) {
                 // redirect to login page
-                navigate("/login");
+                navigate("/");
                 return false;
             }
             // check if there is an error in the response
@@ -106,7 +149,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                         </button>
                         <div className="flex flex-col gap-5">
                             <div className="flex flex-wrap items-center gap-2">
-                                <span className="font-semibold">(#{itemDetails._id})</span>
+                                <span className="font-semibold">{itemDetails.partnershipId}</span>
                                 <div className="flex items-center gap-2">
                                     <span className="text-slate-400 text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 inline m-1" fill="currentColor" viewBox="0 0 16 16">
@@ -187,6 +230,18 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                                                     <div className="px-4 py-2">{itemDetails.country}</div>
                                                 </div>
                                             </div>
+
+                                            <hr className="my-2" />
+                                            <div className="md:flex md:flex-row md:space-x-4 w-full text-xs my-4">
+                                                <div className="w-full flex flex-col mb-3">
+                                                    <label className="font-semibold text-gray-600 py-2">Membership Id</label>
+                                                    <input onChange={handlePartnershipIdChange} value={itemDetails.partnershipId} placeholder="Member Id" className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4" type="text" name="membershipId" />
+                                                </div>
+
+                                                <button onClick={handleUpdateId} className={`w-max bg-green-900 text-white uppercase font-bold rounded-lg p-2 m-2 pt-[-10px]`} href="/#">
+                                                    <span className="text-center">Update</span>
+                                                </button>
+                                            </div>
                                         </div>
 
                                         <div className="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mt-8">
@@ -223,7 +278,7 @@ const MemberDetail = ({ toggleEditModal, itemDetails, isEditModalOpen }) => {
                                             <button onClick={handleApprove} disabled={itemDetails.reviewed} className={`w-max ${itemDetails.reviewed ? 'bg-green-200' : 'bg-green-900'} text-white uppercase font-bold rounded-lg p-2 px-3 m-2`} href="/#">
                                                 <span className="text-center">Approve</span>
                                             </button>
-                                            <button onClick={handleDeleteItem} disabled={itemDetails.reviewed} className="w-max bg-red-900 text-white uppercase font-bold rounded-lg p-2 px-3 m-2" href="/#">
+                                            <button onClick={handleDeleteItem} className="w-max bg-red-900 text-white uppercase font-bold rounded-lg p-2 px-3 m-2" href="/#">
                                                 <span className="text-center">Delete</span>
                                             </button>
                                         </div>

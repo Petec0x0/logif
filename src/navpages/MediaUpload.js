@@ -29,7 +29,7 @@ const MediaUpload = () => {
     const handleUpdateSermon = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        // send a patch request to the server to update memeber
+        // send a patch request to the server to update member
         (async () => {
             const rawResponse = await fetch('/api/media/update-sermons', {
                 method: 'PATCH',
@@ -60,7 +60,7 @@ const MediaUpload = () => {
     const handleUpdateImages = (e) => {
         e.preventDefault();
         setSubmitted(true);
-        // send a patch request to the server to update memeber
+        // send a patch request to the server to update member
         (async () => {
             const rawResponse = await fetch('/api/media/update-images', {
                 method: 'PATCH',
