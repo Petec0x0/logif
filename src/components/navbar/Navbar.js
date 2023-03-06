@@ -24,21 +24,24 @@ const Navbar = () => {
             </button>
           </div>
 
-          <ul className={`lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
-            <li className="font-extrabold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
-              <Link className="font-extrabold" to="/">Home</Link>
+          <ul className={`lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-2 xl:space-x-3 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
+            <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-bold" to="/">Home</Link>
             </li>
-            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
-              <Link className="font-extrabold" to="/donate">Donate</Link>
+            <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-bold" to="/donate">Donate</Link>
             </li>
-            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
-              <Link className="font-extrabold" to="/membership">Partnership</Link>
+            <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-bold" to="/membership">Partnership</Link>
             </li>
-            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
-              <Link className="font-extrabold" to="/about">About us</Link>
+            <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-bold" to="/about">About us</Link>
             </li>
-            <li className="font-bold text-lg text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
-              <Link className="font-extrabold" to="/contact">Contact us</Link>
+            <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-bold" to="/contact">Contact us</Link>
+            </li>
+            <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-bold" to="/media">Media</Link>
             </li>
           </ul>
 

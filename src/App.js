@@ -19,6 +19,8 @@ import UnconfirmedPayments from 'navpages/UnconfirmedPayments';
 import GlobalPayReceipt from 'navpages/GlobalPayReceipt';
 import AdminSettings from 'navpages/AdminSettings';
 import ContactUs from 'navpages/ContactUs';
+import MediaUpload from 'navpages/MediaUpload';
+import Media from 'navpages/Media';
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
         <Route path="/contact" exact element={<ContactUs />} />
         <Route path="/membership" exact element={<Membership />} />
         <Route path="/member/login" exact element={<MemberLogin />} />
+        <Route path="/media" exact element={<Media />} />
         <Route path="/admin/login" exact element={<AdminLogin />} />
         <Route path="dashboard/" element={<DashboardLayout />}>
           <Route index element={<Overview />} />
@@ -38,6 +41,7 @@ function App() {
           <Route path="settings" exact element={<AdminSettings />} />
           <Route path="members-list" element={<MembersList />} />
           <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
+          <Route path="media-upload" element={<MediaUpload />} />
           <Route path="profile" element={<Profile />} />
           <Route path="payment-list/:memberId" element={<MemberPaymentList />} />
           <Route path="make-payment" element={<MakePayment />} />
