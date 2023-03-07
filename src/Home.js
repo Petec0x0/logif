@@ -22,6 +22,10 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    // start up backend server
+    fetch('/api/startup');
+  },[]);
   return (
     <>
       <Navbar />

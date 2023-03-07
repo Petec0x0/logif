@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Alert from 'components/Alert';
 import ProgressBar from 'components/ProgressBar';
@@ -64,6 +64,10 @@ const MemberLogin = () => {
         }
     }
 
+    useEffect(() => {
+        // start up backend server
+        fetch('/api/startup');
+    }, []);
     return (
         <>
             <Navbar />
