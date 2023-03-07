@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Alert from 'components/Alert';
 import ProgressBar from 'components/ProgressBar';
@@ -67,6 +67,10 @@ const AdminLogin = () => {
         }
     }
 
+    useEffect(() => {
+        // start up backend server
+        fetch('/api/startup');
+    }, []);
     return (
         // < !--component -- >
         <div className="px-2 py-8 flex flex-col justify-center sm:py-12">
