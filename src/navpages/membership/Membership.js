@@ -265,7 +265,7 @@ const Membership = () => {
 
                             <p className="mt-4 text-gray-400">
                                 Thank you for your interest in becoming a committed partner
-                                of the City of Jesus International Ministry.
+                                of the Lovers of God International Foundation-LOGIF (Non Governmental Org).
                                 Please review the following commitments that we ask all partners to agree to:
                             </p>
 
