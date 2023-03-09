@@ -102,7 +102,7 @@ const Membership = () => {
             setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
-                text: 'Please upload payment receipt to continue',
+                text: 'Please upload donation receipt to continue',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -113,7 +113,7 @@ const Membership = () => {
             setSubmitted(false);
             Swal.fire({
                 title: 'Error!',
-                text: 'Please upload payment receipt to continue',
+                text: 'Please upload passport photograph to continue',
                 icon: 'error',
                 confirmButtonText: 'Ok'
             });
@@ -260,7 +260,50 @@ const Membership = () => {
                             </h1>
 
                             <p className="mt-4 text-gray-400">
-                                Please kindly fill out this form below to become a PARTNER.
+                                Thank you for your interest in becoming a committed partner
+                                of the City of Jesus International Ministry.
+                                Please review the following commitments that we ask all partners to agree to:
+                            </p>
+
+                            <ul className="list-disc list-inside mt-2 ml-2">
+                                <li className="mb-3 text-gray-500">
+                                    1. Make God's word the foundation of life by living a life that is without sins and sinful desires.
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    2. Loving God, Jesus Christ and the Holy Spirit above all.
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    3. Love and serve others: We believe that following Jesus means loving
+                                    and serving others, just as he did. We ask all partners to strive to
+                                    love their fellow human beings as themselves and to seek out opportunities
+                                    to help those who are less privileged.
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    4. Tithe
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    5. Church building projects supports
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    6. Seed Sowing
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    7. Offerings
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    8. Thanksgiving/Maintenance fees
+                                </li>
+                                <li className="mb-3 text-gray-500">
+                                    9. Note: These freewill donations are offered to God, His children and His works.
+                                    Therefore, they are not refundable.
+                                </li>
+                            </ul>
+
+                            <p className="mt-4 text-gray-400 mb-4">
+                                If you agree to these commitments and would like to become a 
+                                committed partner of the City of Jesus International Ministry, 
+                                please fill out the partnership form below. 
+                                Thank you for your dedication to the church and its mission.
                             </p>
 
 
@@ -375,7 +418,7 @@ const Membership = () => {
                                     onClick={() => setIsMakingPayment(true)}
                                     type="button"
                                     className="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                                    <span>Make Payment </span>
+                                    <span>Make Donation </span>
 
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd"
@@ -393,7 +436,7 @@ const Membership = () => {
                                                 rounded-md font-semibold text-xs tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
                                                 focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" htmlFor="receiptImage">
 
-                                            Upload proof of payment
+                                            Upload proof of donation
                                         </label>
                                         <input id="receiptImage" onChange={handleReceiptUpload} className="text-sm cursor-pointer w-36 hidden" type="file" />
 
