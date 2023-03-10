@@ -505,13 +505,14 @@ const LogifForm = () => {
                         </div>
 
                         <label for="" className="text-xs font-semibold px-1">
-                            Note: The information given must be geniue and not fake. Else, the fake informaton will
-                            cause the giver of such false details to be disqualified.
+                            Please note that the information provided must be genuine and not fake.
+                            Any false details given will result in disqualification of the
+                            person providing such inaccurate information.
                         </label>
-
+                        <br />
                         <label for="" className="text-xs font-semibold px-1 mb-2">
-                            A video clip must be sent to LOGIF on logif.org@gmail.com stating all
-                            the information captured by you in the form.
+                            Please send a video clip to LOGIF at logif.org@gmail.com,
+                            including all the information that you have captured in the form above.
                         </label>
 
                         {
