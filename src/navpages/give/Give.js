@@ -269,7 +269,7 @@ const Give = () => {
                 <li>LOGIF Partnership</li>
                 <li>Seed sowing/Offering</li>
                 <li>Donation</li>
-                <li>Church building fund</li>
+                <li>LOGIF building projects</li>
               </ul>
 
               <p>All Donors Must send Proof of donation to the following;</p>
@@ -350,7 +350,7 @@ const Give = () => {
                   onClick={paystack2}
                   className="pay-sub rounded-lg"
                   type="submit"
-                  value="Pay to LOGIF"
+                  value="Donate to LOGIF"
                 />
               </div>
             </div>

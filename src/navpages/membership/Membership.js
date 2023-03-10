@@ -283,22 +283,19 @@ const Membership = () => {
                                     to help those who are less privileged.
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    4. Tithe
+                                    4. LOGIF building projects supports
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    5. Church building projects supports
+                                    5. Seed sowing
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    6. Seed sowing
+                                    6. Offerings
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    7. Offerings
+                                    7. Thanksgiving/Maintenance fees
                                 </li>
                                 <li className="mb-3 text-gray-500">
-                                    8. Thanksgiving/Maintenance fees
-                                </li>
-                                <li className="mb-3 text-gray-500">
-                                    9. Note: These freewill donations are offered to God, His children and His works.
+                                    8. Note: These freewill donations are offered to God, His children and His works.
                                     Therefore, they are not refundable.
                                 </li>
                             </ul>
