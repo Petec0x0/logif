@@ -21,6 +21,8 @@ import AdminSettings from 'navpages/AdminSettings';
 import ContactUs from 'navpages/ContactUs';
 import MediaUpload from 'navpages/MediaUpload';
 import Media from 'navpages/Media';
+import LogifForm from 'navpages/LogifForm';
+import LogifFormData from 'navpages/LogifFormData';
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
         <Route path="/membership" exact element={<Membership />} />
         <Route path="/member/login" exact element={<MemberLogin />} />
         <Route path="/media" exact element={<Media />} />
+        <Route path="/logif-form" exact element={<LogifForm />} />
         <Route path="/admin/login" exact element={<AdminLogin />} />
         <Route path="dashboard/" element={<DashboardLayout />}>
           <Route index element={<Overview />} />
@@ -42,6 +45,7 @@ function App() {
           <Route path="members-list" element={<MembersList />} />
           <Route path="unconfirmed-payments" element={<UnconfirmedPayments />} />
           <Route path="media-upload" element={<MediaUpload />} />
+          <Route path="logif-form-data" element={<LogifFormData />} />
           <Route path="profile" element={<Profile />} />
           <Route path="payment-list/:memberId" element={<MemberPaymentList />} />
           <Route path="make-payment" element={<MakePayment />} />

@@ -76,13 +76,23 @@ const Sidebar = ({ isSidebarOpen }) => {
                                             <span className="ml-3 flex-1 whitespace-nowrap">Unconfirmed Payments</span>
                                         </Link>
                                     </li>
-                                    
+
                                     <li>
                                         <Link to="media-upload" className="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group ">
                                             <svg className="h-6 w-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill="#000000" d="M13,1 C14.1046,1 15,1.89543 15,3 L15,13 C15,14.1046 14.1046,15 13,15 L3,15 C1.89543,15 1,14.1046 1,13 L1,3 C1,1.89543 1.89543,1 3,1 L13,1 Z M13,3 L3,3 L3,13 L13,13 L13,3 Z M9.5,8 L12,10.8571 L12,12 L4,12 L4,10.8 L5.5,9 L7.02439,10.8293 L9.5,8 Z M6.5,5 C7.32843,5 8,5.67157 8,6.5 C8,7.32843 7.32843,8 6.5,8 C5.67157,8 5,7.32843 5,6.5 C5,5.67157 5.67157,5 6.5,5 Z" />
                                             </svg>
                                             <span className="ml-3 flex-1 whitespace-nowrap">Media</span>
+                                        </Link>
+                                    </li>
+
+                                    <li>
+                                        <Link to="logif-form-data" className="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group ">
+                                            <svg className="h-6 w-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                                <path fill="#000000" d="M21 7c0 2.21-4.03 4-9 4S3 9.21 3 7s4.03-4 9-4 9 1.79 9 4z" />
+                                                <path stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 7c0 2.21-4.03 4-9 4S3 9.21 3 7m18 0c0-2.21-4.03-4-9-4S3 4.79 3 7m18 0v5M3 7v5m18 0c0 2.21-4.03 4-9 4s-9-1.79-9-4m18 0v5c0 2.21-4.03 4-9 4s-9-1.79-9-4v-5" />
+                                            </svg>
+                                            <span className="ml-3 flex-1 whitespace-nowrap">LOGIF Form Data</span>
                                         </Link>
                                     </li>
 
