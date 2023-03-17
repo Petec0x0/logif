@@ -358,13 +358,12 @@ const MembershipPaymentModalContent = () => {
                           </g>
                         </svg>
                         <select name="currency" className="text-2xl w-64 font-bold rounded border-2 border-pribg-primary text-gray-600 h-14 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
-                        <option value="USD">USD</option>
-                          <option value="NGN">NGN</option>
+                          <option value="USD">USD</option>
                         </select>
                       </div>
 
                       <input type="hidden" id="merch_txnref" name="merch_txnref" value={makeid(50)}></input>
-                      <input type="hidden" id="merchantid" name="merchantid" value="22979" />
+                      <input type="hidden" id="merchantid" name="merchantid" value="22980" />
                     </div>
 
 
