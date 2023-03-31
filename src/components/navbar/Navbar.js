@@ -43,6 +43,9 @@ const Navbar = () => {
             <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
               <Link className="font-bold" to="/media">Media</Link>
             </li>
+            <li className="font-bold text-sm text-gray-900 hover:text-primary transition ease-in-out duration-300 mb-5 lg:mb-0">
+              <Link className="font-bold" to="/logif-form">Logif Form</Link>
+            </li>
           </ul>
 
           <div className={`lg:flex mb-2 flex-col md:flex-row md:items-center text-center md:space-x-6 ${mobileNavOpen ? 'flex' : 'hidden'}`}>
